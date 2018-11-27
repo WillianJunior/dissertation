@@ -1,0 +1,47 @@
+\label{sec:anex_tab}
+
+On the following page is the comparative table with all the examined computation reuse approaches. The table is organized as follows: The reference to the publication. The Implementation Level (IL) on which computation reuse was explored, being Hardware-Level (H), Software-Level (S), Compiler-Level (C) or a combination of these. The Application Domain for which the proposed approach was implemented. Whether the proposed approach have a Flexible Application (FA), meaning that it can be easily extended to different domains. The origin of the Reuse Opportunities. The Granularity of the reusable Tasks. Whether the Reusable Tasks Matching (RTM) must be full (i.e., all inputs must be the Same) or if there is some fault-tolerance guarantee that relaxes the Same inputs constraint, thus enabling Similar tasks to be reused. The Task Granularity Flexibility (TGF), i.e., whether the granularity level is static or it can be adaptable. If the Reuse Evaluation is Static (i.e., the same application will always have the same reuse) or if the reuse is evaluated dynamically. Whether a Training (T) step is necessary prior to the reuse evaluation. The Reusability Environment Scale (RES), being either Local (L), Distributed (D) or Multicore Local (M). Finally, the goal of the approach to be achieved through computation reuse.
+
+Every single characteristic of the table is explained in details in Section \ref{sec:reuse_intro}, along with a small overview on each approach. The last line corresponds to the characteristics of the Fine-Grain Reuse approach proposed and implemented on this work.
+
+\newpage
+
+\begin{adjustbox}{angle=0}
+% \begin{table}[t!]
+% \begin{center}
+%\vspace*{-2ex}
+\begin{scriptsize}
+\begin{tabular}{ccccccccc}
+\toprule
+
+Reference       & IL         & AF & Reuse Opp. & Tasks Granularity                                & RTM & Reuse Eval. & T & RES \\
+
+\midrule
+
+\cite{reuse1} & H            & Flexible                   & Predictive          & Instruction-Level                                & Same       & Dynamic          & No             & L   \\
+\cite{reuse2} & H            & Flexible                   & Memoization         & Instruction-Level                                & Same       & Dynamic          & No             & L   \\
+\cite{reuse3} & H            & Flexible                   & Memoization         & \makecell{Instruction-Level \\ Trivial Operations}             & Same       & Dynamic          & No             & L   \\
+\cite{reuse4} & S            & Flexible                   & \makecell{Analytic + \\ Memoization}  & \makecell{Fine-Grain \\ Regions of Code} & Same       & Static           & Yes            & L   \\
+\cite{reuse5} & S            & Partial                 & Memoization         & Coarse-Grain                          & Same       & Dynamic          & No             & D   \\
+\cite{reuse7} & S            & Flexible                   & Memoization         & Full Application                                  & Same       & Dynamic          & No           & D  \\
+\cite{reuse8} & S            & DS                    & Memoization         & Coarse-Grain          & Same       & Dynamic          & No             & L   \\
+\cite{reuse9}       & H+S & DS                    & Memoization         & \makecell{Instruction-Level \\ Complex Operations} & Similar             & Dynamic          & Yes            & L   \\
+\cite{reuse10}       & H+S & Partial        & Memoization         & \makecell{Instruction-Level + \\ Fine-Grain \\ Regions of Code} & Same       & \makecell{Static + \\ Dynamic}          & Yes     & L  \\
+\cite{reuse11}       & H            & Partial & Memoization         & \makecell{Instruction-Level \\ Floating-Point \\ Operations}     & Similar             & Dynamic          & No             & L   \\
+\cite{reuse12}       & S            & DS                    & Analytic            & Coarse-Grain                          & Same       & Dynamic          & No             & L         \\
+\cite{reuse13}       & H            & Partial       & Memoization         & \makecell{Instruction-Level \\ Floating-Point \\ Operations}     & Similar             & Dynamic          & No             & L                 \\
+\cite{reuse14}       & H            & Flexible                   & Memoization         & Instruction-Level                                & Same       & Static          & No             & M  \\
+\midrule
+
+This Work       & S            & Partial                & Analytic            & \makecell{Coarse-Grain \\ and Fine-Grain}        & Same       & Static           & No             & D \\
+
+\bottomrule
+
+\end{tabular}
+\end{scriptsize}
+% \label{tab:parameters}
+% \caption{Taxonomic evaluation of computation reuse approaches. Implementation Level (IL): Hardware (H), Software (S), Compiler (C). Flexible Application (FA). Needs Training Step (T). Reusability Environment (RE): Local (L), Distributed(D), Local Mutiprocessed (M). Task Granularity}
+% \end{center}
+% \vspace{-4mm}
+% \end{table}
+\end{adjustbox}

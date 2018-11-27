@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+
+
+\usepackage[english]{babel}
+
+\usepackage{pdfpages}% incluir PDFs, usado no apêndice
+
+\usepackage{algpseudocode,algorithm}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{qtree}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hhline}
+\usepackage{xcolor}
+\usepackage{tabularx} 
+\usepackage{collcell}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\usepackage{setspace}
+
+\usepackage{adjustbox}
+
+\usepackage{array}
+\usepackage{makecell}
+
+\date{}
+
+\author{Willian de Oliveira Barreiros J\'unior, George Luiz Medeiros Teodoro}%
+
+\title{Accelerating Sensitivity Analysis in Microscopy Image Segmentation Workflows with Multi-level Computation and Data Reuse}%
+
+% Keywords command
+\providecommand{\keywords}[1]
+{
+  \small
+  \textbf{\textit{Keywords---}} #1
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Texto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}%
+	\maketitle
+	\setstretch{1.2}
+
+	\begin{abstract}
+	With the increasingly availability of digital microscopy imagery equipments there is a demand for efficient execution of whole slide tissue image applications. Through the process of sensitivity analysis it is possible to improve the output quality of such applications, and thus, improve the desired analysis quality. Due to the high computational cost of such analyses and the recurrent nature of executed tasks from sensitivity analysis methods (i.e., reexecution of tasks), the opportunity for computation reuse arises. By performing computation reuse we can optimize the run time of sensitivity analysis applications. This work focuses then on finding new ways to take advantage of computation reuse opportunities on multiple task abstraction levels. This is done by presenting the coarse-grain merging strategy and the new fine-grain merging algorithms, implemented on top of the Region Templates Framework.
+	\end{abstract}
+
+	\hspace{10pt}
+	\keywords{Computation Reuse, Sensitivity Analysis, Region Templates Framework}%
+
+	\hspace{10pt}
+
+    \input{tex/1_Introducao}
+    \input{tex/2_teo}
+    \input{tex/3_merge}
+    \input{tex/4_results}
+    \input{tex/5_concl}
+
+    \bibliography{bibliografia}
+    \bibliographystyle{ieeetr}
+
+
+    %\apendice{Apendice_Fichamento}{Fichamento de Artigo Científico}%
+    % \anexo{tax_table}{Comparative Table of Reuse Approaches}%
+\end{document}%
